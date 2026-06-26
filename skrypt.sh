@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ "$1" = "--date" ]; then
+if [ "$1" = "--date" ] || [ "$1" = "-d" ]; then
     date
 
-elif [ "$1" = "--logs" ]; then
+elif [ "$1" = "--logs" ] || [ "$1" = "-l" ]; then
     liczbaPlikow=${2:-100}
 
     for i in $(seq 1 "$liczbaPlikow")
@@ -15,12 +15,12 @@ elif [ "$1" = "--logs" ]; then
         echo "Data utworzenia: $(date)" >> "$nazwaPliku"
     done
 
-elif [ "$1" = "--help" ]; then
+elif [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo "Dostepne opcje:"
-    echo "--date          Wyswietla dzisiejsza date"
-    echo "--logs          Tworzy 100 plikow log"
-    echo "--logs LICZBA   Tworzy podana liczbe plikow log"
+    echo "--date, -d          Wyswietla dzisiejsza date"
+    echo "--logs, -l          Tworzy 100 plikow log"
+    echo "--logs LICZBA        Tworzy podana liczbe plikow log"
 
 else
-    echo "Nieznana opcja. Uzyj --help."
+    echo "Nieznana opcja. Uzyj --help lub -h."
 fi
