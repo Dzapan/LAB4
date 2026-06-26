@@ -17,9 +17,10 @@ elif [ "$1" = "--logs" ] || [ "$1" = "-l" ]; then
 
 elif [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo "Dostepne opcje:"
-    echo "--date, -d          Wyswietla dzisiejsza date"
-    echo "--logs, -l          Tworzy 100 plikow log"
-    echo "--logs LICZBA        Tworzy podana liczbe plikow log"
+    echo "--date, -d             Wyswietla dzisiejsza date"
+    echo "--logs, -l             Tworzy 100 plikow log"
+    echo "--logs LICZBA           Tworzy podana liczbe plikow log"
+    echo "--help, -h             Wyswietla pomoc"
 
 elif [ "$1" = "--init" ]; then
     REPO_URL="https://github.com/Dzapan/LAB4.git"
