@@ -28,8 +28,8 @@ elif [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo "--help, -h             Wyswietla pomoc"
 
 elif [ "$1" = "--init" ]; then
-    REPO_URL="https://github.com/TWOJ_LOGIN/NBI-Lab4-Git.git"
-    REPO_NAME="NBI-Lab4-Git"
+    REPO_URL="https://github.com/Dzapan/LAB4.git"
+    REPO_NAME="LAB4"
     KATALOG_DOCELOWY="$PWD/$REPO_NAME"
 
     if [ -d "$KATALOG_DOCELOWY" ]; then
