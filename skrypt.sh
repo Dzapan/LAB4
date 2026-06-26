@@ -48,6 +48,23 @@ elif [ "$1" = "--init" ]; then
     echo "Katalog zostal dodany do PATH."
     echo "Uruchom: source ~/.bashrc"
 
+elif [ "$1" = "--error" ] || [ "$1" = "-e" ]; then
+    liczbaBledow=${2:-100}
+
+    for i in $(seq 1 "$liczbaBledow")
+    do
+        katalog="error$i"
+        plik="$katalog/error$i.txt"
+
+        mkdir -p "$katalog"
+
+        echo "Nazwa pliku: error$i.txt" > "$plik"
+        echo "Utworzony przez skrypt: $0" >> "$plik"
+        echo "Data utworzenia: $(date)" >> "$plik"
+    done
+
+    echo "Utworzono $liczbaBledow katalogow error."
+
 else
     echo "Nieznana opcja. Uzyj --help lub -h."
 fi
