@@ -15,15 +15,20 @@ elif [ "$1" = "--logs" ] || [ "$1" = "-l" ]; then
         echo "Data utworzenia: $(date)" >> "$nazwaPliku"
     done
 
+    echo "Utworzono $liczbaPlikow plikow log."
+
 elif [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
     echo "Dostepne opcje:"
     echo "--date, -d             Wyswietla dzisiejsza date"
     echo "--logs, -l             Tworzy 100 plikow log"
     echo "--logs LICZBA           Tworzy podana liczbe plikow log"
+    echo "--error, -e             Tworzy 100 katalogow error"
+    echo "--error LICZBA          Tworzy podana liczbe katalogow error"
+    echo "--init                  Klonuje repozytorium i dodaje je do PATH"
     echo "--help, -h             Wyswietla pomoc"
 
 elif [ "$1" = "--init" ]; then
-    REPO_URL="https://github.com/Dzapan/LAB4.git"
+    REPO_URL="https://github.com/TWOJ_LOGIN/NBI-Lab4-Git.git"
     REPO_NAME="NBI-Lab4-Git"
     KATALOG_DOCELOWY="$PWD/$REPO_NAME"
 
@@ -67,5 +72,6 @@ elif [ "$1" = "--error" ] || [ "$1" = "-e" ]; then
     echo "Utworzono $liczbaBledow katalogow error."
 
 else
-    echo "Nieznana opcja. Uzyj --help lub -h."
+    echo "Nieznana opcja."
+    echo "Uzyj --help lub -h, aby zobaczyc dostepne opcje."
 fi
