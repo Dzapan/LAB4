@@ -24,7 +24,7 @@ elif [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
 
 elif [ "$1" = "--init" ]; then
     REPO_URL="https://github.com/Dzapan/LAB4.git"
-    REPO_NAME="NBI-Lab4-Git"
+    REPO_NAME="LAB4"
     KATALOG_DOCELOWY="$PWD/$REPO_NAME"
 
     if [ -d "$KATALOG_DOCELOWY" ]; then
